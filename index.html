@@ -83,7 +83,7 @@
 
     .correo {
       display: inline-block;
-      margin: 25px auto 0;
+      margin: 25px auto 60px;
       background: #00d6a2;
       color: white;
       padding: 12px 25px;
@@ -147,36 +147,33 @@
       color: #00c79c;
     }
 
-    /* SECCIÓN POLÍTICAS PYME */
-    .politicas {
+    /* NUEVA SECCIÓN DE PRODUCTO PERSONALIZADO */
+    .figura-personalizada {
       margin-top: 80px;
-      background: linear-gradient(180deg, #ffffff, #f0fffa);
-      padding: 40px;
+      background: linear-gradient(180deg, #ffffff, #f5fffb);
+      padding: 50px;
       border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 255, 200, 0.25);
       max-width: 900px;
-      box-shadow: 0 0 25px rgba(0, 255, 180, 0.25);
-      text-align: left;
+      text-align: center;
     }
 
-    .politicas h2 {
-      text-align: center;
+    .figura-personalizada h2 {
       color: #00a884;
       margin-bottom: 20px;
     }
 
-    .politicas p, .politicas ul {
+    .figura-personalizada p {
       color: #333;
-      line-height: 1.7;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
     }
 
-    .politicas ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .politicas ul li::before {
-      content: "• ";
-      color: #00a884;
+    .figura-personalizada img {
+      width: 280px;
+      border-radius: 12px;
+      margin-top: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 180, 0.3);
     }
   </style>
 </head>
@@ -198,14 +195,10 @@
         <li>Puedes adjuntar tus archivos STL, OBJ o imágenes de referencia.</li>
         <li>Describe brevemente el tamaño, color o material que deseas.</li>
       </ul>
-
-      <div style="text-align:center;">
-        <a class="correo" id="copiarCorreo">Copiar correo de PrinteX</a>
-      </div>
     </div>
   </div>
 
-  <!-- SECCIÓN NUEVA DEL PRODUCTO -->
+  <!-- SECCIÓN DEL PRODUCTO PRINCIPAL -->
   <div class="producto">
     <img src="https://titan13toy.com/cdn/shop/collections/Frame_1000007125.png?v=1756851164&width=1500" alt="Figura impresa 3D">
 
@@ -239,6 +232,19 @@
       </ul>
     </div>
   </div>
+
+  <!-- NUEVA SECCIÓN: FIGURA PERSONALIZADA -->
+  <div class="figura-personalizada">
+    <h2>Producto / Figura Personalizada</h2>
+    <p>
+      ¿Quieres una figura completamente personalizada con tu rostro, tu personaje favorito o tu mascota?
+      En PrinteX realizamos figuras únicas desde cero. Envíanos tu idea y te guiaremos en el proceso.
+    </p>
+    <img src="https://cdn.pixabay.com/photo/2023/09/01/13/47/3d-print-8225535_960_720.png" alt="Figura personalizada 3D">
+  </div>
+
+  <!-- BOTÓN DE CORREO AHORA AL FINAL -->
+  <a class="correo" id="copiarCorreo">Copiar correo de PrinteX</a>
 
   <script>
     const boton = document.getElementById('copiarCorreo');
