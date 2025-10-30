@@ -1,0 +1,229 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrinteX - IMPRESION3D</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      animation: mover 3s infinite alternate ease-in-out;
+      background: linear-gradient(90deg, #00f7ff, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 30px;
+    }
+
+    @keyframes mover {
+      0% { transform: translateX(-20px); }
+      100% { transform: translateX(20px); }
+    }
+
+    .computadora {
+      width: 350px;
+      margin-top: 40px;
+      filter: drop-shadow(0 0 20px #00ffcc80);
+    }
+
+    .contenedor {
+      text-align: center;
+      max-width: 700px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p {
+      margin-top: 25px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #ccc;
+      max-width: 600px;
+    }
+
+    .info {
+      margin-top: 50px;
+      background-color: #111;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 650px;
+      text-align: left;
+      box-shadow: 0 0 20px rgba(0,255,150,0.15);
+    }
+
+    .info h2 {
+      color: #00ffb3;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .info ul {
+      color: #ccc;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .correo {
+      display: inline-block;
+      margin: 25px auto 0;
+      background: #00ffb3;
+      color: #111;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+
+    .correo:hover {
+      background: #00cc88;
+      transform: scale(1.05);
+    }
+
+    /* SECCIÓN DE PRODUCTO */
+    .producto {
+      margin-top: 80px;
+      background: #111;
+      border-radius: 15px;
+      padding: 40px;
+      max-width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      box-shadow: 0 0 25px rgba(0,255,170,0.15);
+    }
+
+    .producto img {
+      width: 300px;
+      border-radius: 12px;
+      filter: drop-shadow(0 0 10px #00ff9960);
+    }
+
+    .producto-info {
+      text-align: left;
+      max-width: 500px;
+    }
+
+    .producto-info h2 {
+      color: #00ffb3;
+      margin-bottom: 10px;
+    }
+
+    .producto-info h3 {
+      color: #00ffc3;
+      margin-top: 15px;
+    }
+
+    .producto-info ul {
+      list-style-type: none;
+      padding-left: 0;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .producto-info ul li::before {
+      content: "• ";
+      color: #00ffb3;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>PrinteX</h1>
+
+  <img class="computadora" src="https://img.drz.lazcdn.com/static/np/p/82c3b8f16dc1a5711c35e5f31c524ddb.png_720x720q80.png" alt="Computadora 3D">
+
+  <div class="contenedor">
+    <p>
+      PrinteX se fundó con el objetivo de fomentar la imaginación y la creatividad mediante impresiones 3D únicas. 
+      Buscamos inspirar a jóvenes y niños a convertir sus ideas en objetos reales mediante la tecnología 3D.
+    </p>
+
+    <div class="info">
+      <h2>¿Necesitas ayuda o quieres enviarnos tu diseño?</h2>
+      <ul>
+        <li>Si tienes dudas sobre formatos o tipos de impresión, escríbenos por correo.</li>
+        <li>Puedes adjuntar tus archivos STL, OBJ o imágenes de referencia.</li>
+        <li>Describe brevemente el tamaño, color o material que deseas.</li>
+      </ul>
+
+      <div style="text-align:center;">
+        <a class="correo" id="copiarCorreo">Copiar correo de PrinteX</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN NUEVA DEL PRODUCTO -->
+  <div class="producto">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/3D_printing_example.jpg" alt="Figura impresa 3D">
+
+    <div class="producto-info">
+      <h2>Figura 3D Personalizada</h2>
+      <p>Pieza impresa con precisión y materiales de alta calidad. Ideal para coleccionistas o regalos personalizados.</p>
+
+      <h3>Detalles Técnicos</h3>
+      <ul>
+        <li>Peso: 60 g - 100 g (según personalización)</li>
+        <li>Material: Filamento PETG</li>
+        <li>Infill: 10-15% (ahorro) / 50-70% (resistencia)</li>
+        <li>Perímetros: 2-3 mm</li>
+      </ul>
+
+      <h3>Costos Estimados</h3>
+      <ul>
+        <li>Filamento: $800 - $1.300 CLP</li>
+        <li>Mano de obra: $7.000</li>
+        <li>Pintura y acabado: $2.000</li>
+        <li>Envío: $2.000</li>
+        <li><strong>Total estimado: $15.800 - $20.000 CLP</strong></li>
+      </ul>
+
+      <h3>Dimensiones aproximadas</h3>
+      <ul>
+        <li><strong>Cabeza:</strong> 2.5 cm (Alto 2.4, Ancho 2.0, Profundidad 2.0)</li>
+        <li><strong>Torso:</strong> 3.5 cm (Ancho hombros 3.5-4, Profundidad 2.0)</li>
+        <li><strong>Brazos:</strong> 6 cm (Antebrazo 2.4 largo, Mano 0.8 largo)</li>
+        <li><strong>Piernas:</strong> 5.7 cm (Pantorrilla 2 largo, Pie 0.5 largo)</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const boton = document.getElementById('copiarCorreo');
+    const correo = "srponablackgenial@gmail.com";
+
+    boton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(correo);
+        boton.textContent = "¡Copiado!";
+        boton.style.background = "#00cc88";
+        setTimeout(() => {
+          boton.textContent = "Copiar correo de PrinteX";
+          boton.style.background = "#00ffb3";
+        }, 2000);
+      } catch (err) {
+        alert("No se pudo copiar el correo automáticamente. Copia manualmente: " + correo);
+      }
+    });
+  </script>
+</body>
+</html>
