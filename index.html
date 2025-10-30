@@ -8,8 +8,8 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #0a0a0a;
-      color: #f5f5f5;
+      background: linear-gradient(180deg, #eaffff, #f5fff5);
+      color: #202020;
       font-family: 'Poppins', sans-serif;
       display: flex;
       flex-direction: column;
@@ -24,58 +24,59 @@
       letter-spacing: 4px;
       text-transform: uppercase;
       animation: mover 3s infinite alternate ease-in-out;
-      background: linear-gradient(90deg, #00f7ff, #00ff88);
+      background: linear-gradient(90deg, #00a8ff, #00ff88);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-top: 30px;
+      margin-top: 40px;
+      text-shadow: 0 2px 10px rgba(0, 255, 180, 0.3);
     }
 
     @keyframes mover {
-      0% { transform: translateX(-20px); }
-      100% { transform: translateX(20px); }
+      0% { transform: translateX(-10px); }
+      100% { transform: translateX(10px); }
     }
 
     .computadora {
       width: 350px;
       margin-top: 40px;
-      filter: drop-shadow(0 0 20px #00ffcc80);
+      filter: drop-shadow(0 0 20px rgba(0, 180, 255, 0.3));
     }
 
     .contenedor {
       text-align: center;
       max-width: 700px;
-      margin-top: 20px;
+      margin-top: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     p {
-      margin-top: 25px;
+      margin-top: 20px;
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #ccc;
+      color: #333;
       max-width: 600px;
     }
 
     .info {
       margin-top: 50px;
-      background-color: #111;
+      background-color: #ffffffd8;
       padding: 25px;
-      border-radius: 12px;
+      border-radius: 15px;
       max-width: 650px;
       text-align: left;
-      box-shadow: 0 0 20px rgba(0,255,150,0.15);
+      box-shadow: 0 0 20px rgba(0, 255, 180, 0.2);
     }
 
     .info h2 {
-      color: #00ffb3;
+      color: #00a884;
       margin-bottom: 10px;
       text-align: center;
     }
 
     .info ul {
-      color: #ccc;
+      color: #333;
       line-height: 1.6;
       text-align: left;
     }
@@ -83,39 +84,40 @@
     .correo {
       display: inline-block;
       margin: 25px auto 0;
-      background: #00ffb3;
-      color: #111;
+      background: #00d6a2;
+      color: white;
       padding: 12px 25px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s, transform 0.2s;
       cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 255, 180, 0.3);
     }
 
     .correo:hover {
-      background: #00cc88;
+      background: #00b388;
       transform: scale(1.05);
     }
 
     /* SECCIÓN DE PRODUCTO */
     .producto {
       margin-top: 80px;
-      background: #111;
-      border-radius: 15px;
+      background: linear-gradient(180deg, #ffffff, #f1fff7);
+      border-radius: 20px;
       padding: 40px;
       max-width: 900px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 40px;
-      box-shadow: 0 0 25px rgba(0,255,170,0.15);
+      box-shadow: 0 0 25px rgba(0, 200, 150, 0.2);
     }
 
     .producto img {
       width: 300px;
       border-radius: 12px;
-      filter: drop-shadow(0 0 10px #00ff9960);
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.4);
     }
 
     .producto-info {
@@ -124,46 +126,46 @@
     }
 
     .producto-info h2 {
-      color: #00ffb3;
+      color: #00a884;
       margin-bottom: 10px;
     }
 
     .producto-info h3 {
-      color: #00ffc3;
+      color: #00c79c;
       margin-top: 15px;
     }
 
     .producto-info ul {
       list-style-type: none;
       padding-left: 0;
-      color: #ccc;
+      color: #333;
       line-height: 1.6;
     }
 
     .producto-info ul li::before {
       content: "• ";
-      color: #00ffb3;
+      color: #00c79c;
     }
 
     /* SECCIÓN POLÍTICAS PYME */
     .politicas {
       margin-top: 80px;
-      background-color: #111;
+      background: linear-gradient(180deg, #ffffff, #f0fffa);
       padding: 40px;
-      border-radius: 15px;
+      border-radius: 20px;
       max-width: 900px;
-      box-shadow: 0 0 25px rgba(0,255,170,0.15);
+      box-shadow: 0 0 25px rgba(0, 255, 180, 0.25);
       text-align: left;
     }
 
     .politicas h2 {
       text-align: center;
-      color: #00ffb3;
+      color: #00a884;
       margin-bottom: 20px;
     }
 
     .politicas p, .politicas ul {
-      color: #ccc;
+      color: #333;
       line-height: 1.7;
     }
 
@@ -174,7 +176,7 @@
 
     .politicas ul li::before {
       content: "• ";
-      color: #00ffb3;
+      color: #00a884;
     }
   </style>
 </head>
@@ -266,10 +268,10 @@
       try {
         await navigator.clipboard.writeText(correo);
         boton.textContent = "¡Copiado!";
-        boton.style.background = "#00cc88";
+        boton.style.background = "#00b388";
         setTimeout(() => {
           boton.textContent = "Copiar correo de PrinteX";
-          boton.style.background = "#00ffb3";
+          boton.style.background = "#00d6a2";
         }, 2000);
       } catch (err) {
         alert("No se pudo copiar el correo automáticamente. Copia manualmente: " + correo);
