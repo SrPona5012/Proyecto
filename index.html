@@ -100,7 +100,7 @@
       transform: scale(1.05);
     }
 
-    /* SECCIÓN DE PRODUCTO */
+    /* SECCIÓN DE PRODUCTO PRINCIPAL */
     .producto {
       margin-top: 80px;
       background: linear-gradient(180deg, #ffffff, #f1fff7);
@@ -175,6 +175,17 @@
       margin-top: 15px;
       box-shadow: 0 0 20px rgba(0, 255, 180, 0.3);
     }
+
+    .figura-precio {
+      background: #eafff7;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #008060;
+      box-shadow: 0 0 10px rgba(0, 200, 150, 0.2);
+      display: inline-block;
+    }
   </style>
 </head>
 <body>
@@ -187,15 +198,6 @@
       PrinteX se fundó con el objetivo de fomentar la imaginación y la creatividad mediante impresiones 3D únicas. 
       Buscamos inspirar a jóvenes y niños a convertir sus ideas en objetos reales mediante la tecnología 3D.
     </p>
-
-    <div class="info">
-      <h2>¿Necesitas ayuda o quieres enviarnos tu diseño?</h2>
-      <ul>
-        <li>Si tienes dudas sobre formatos o tipos de impresión, escríbenos por correo.</li>
-        <li>Puedes adjuntar tus archivos STL, OBJ o imágenes de referencia.</li>
-        <li>Describe brevemente el tamaño, color o material que deseas.</li>
-      </ul>
-    </div>
   </div>
 
   <!-- SECCIÓN DEL PRODUCTO PRINCIPAL -->
@@ -222,14 +224,6 @@
         <li>Envío: $2.000</li>
         <li><strong>Total estimado: $15.800 - $20.000 CLP</strong></li>
       </ul>
-
-      <h3>Dimensiones aproximadas</h3>
-      <ul>
-        <li><strong>Cabeza:</strong> 2.5 cm (Alto 2.4, Ancho 2.0, Profundidad 2.0)</li>
-        <li><strong>Torso:</strong> 3.5 cm (Ancho hombros 3.5-4, Profundidad 2.0)</li>
-        <li><strong>Brazos:</strong> 6 cm (Antebrazo 2.4 largo, Mano 0.8 largo)</li>
-        <li><strong>Piernas:</strong> 5.7 cm (Pantorrilla 2 largo, Pie 0.5 largo)</li>
-      </ul>
     </div>
   </div>
 
@@ -241,9 +235,23 @@
       En PrinteX realizamos figuras únicas desde cero. Envíanos tu idea y te guiaremos en el proceso.
     </p>
     <img src="https://cdn.pixabay.com/photo/2023/09/01/13/47/3d-print-8225535_960_720.png" alt="Figura personalizada 3D">
+
+    <div class="figura-precio">
+      💰 Precio estimado: entre $18.000 y $25.000 CLP (según nivel de detalle y tamaño)
+    </div>
   </div>
 
-  <!-- BOTÓN DE CORREO AHORA AL FINAL -->
+  <!-- SECCIÓN DE AYUDA (DEBAJO DEL PRODUCTO PERSONALIZADO) -->
+  <div class="info">
+    <h2>¿Necesitas ayuda o quieres enviarnos tu diseño?</h2>
+    <ul>
+      <li>Si tienes dudas sobre formatos o tipos de impresión, escríbenos por correo.</li>
+      <li>Puedes adjuntar tus archivos STL, OBJ o imágenes de referencia.</li>
+      <li>Describe brevemente el tamaño, color o material que deseas.</li>
+    </ul>
+  </div>
+
+  <!-- BOTÓN DE COPIAR CORREO DEBAJO -->
   <a class="correo" id="copiarCorreo">Copiar correo de PrinteX</a>
 
   <script>
